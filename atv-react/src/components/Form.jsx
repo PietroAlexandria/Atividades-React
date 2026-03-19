@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Form(){
     const [usuario, setUsuario] = useState({nome: '', email: ''});
     const handleInputChange = (event) => {
-        const {name, value} = event.target;
+        const {name, value} = event.target; //USADO 'name' E 'value' POIS SÃO NATIVOS DO 'event.target'
 
         setUsuario((dadosAnteriores) => ({
             ...dadosAnteriores,

@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import Contador from "./components/Contador"
 import Saudacao from './components/Saudacao'
 import Form from "./components/Form"
+import InputNome from "./components/InputNome"
 import './App.css'
 
 function App() {
@@ -39,11 +40,17 @@ function App() {
         <Form />
       </div>
 
-      <h1 className="title">Atividade 4</h1>
+      <h1 className="title">Atividade 4 e 5</h1>
 
       <div>
-        
+        <InputNome />
       </div>
+
+      <h1 className="title">Atividade 6</h1>
+
+
+      <br />
+      <br />
 
     </>
 

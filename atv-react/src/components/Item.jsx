@@ -1,7 +1,7 @@
-export default function Item({nome, index, remover}){
+export default function Item({dado, index, remover}){
     return(
         <li>
-            {nome}
+            <strong>Nome: </strong> {dado.nome} | <strong>E-mail: </strong> {dado.email}
             <button className="counter" onClick={() => remover(index)} style={{marginLeft: '10px'}}>Remover</button>
         </li>
     );

@@ -1,4 +1,6 @@
-export default function Formulario(){
+import { useState } from "react";
+
+export default function Formulario({adicionar}){
     const [usuario, setUsuario] = useState({nome: '', email: ''});
 
     const handleInputChange = (e) => {
@@ -32,6 +34,7 @@ export default function Formulario(){
                 onChange={handleInputChange} 
                 placeholder="Digite seu nome"
             />
+            <br />
             <label>E-mail: </label>
             <input 
                 type="email" 
@@ -40,7 +43,8 @@ export default function Formulario(){
                 onChange={handleInputChange} 
                 placeholder="Digite seu E-mail"
             />
-            <button type="submit">Adicionar</button>
+            <br />
+            <button type="submit" className="counter" style={{marginTop: '10px', textAlign: 'center'}}>Adicionar</button>
         </form>
     );
 }

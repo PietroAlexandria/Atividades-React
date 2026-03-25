@@ -5,8 +5,15 @@ export default function InputNome(){
     const [lista, setLista] = useState([]);
 
     const adicionar = () => {
+
+        if (nome.trim() === "") {
+            alert("Digite um nome válido!");
+            return;
+        }
+        else{
             setLista([...lista, nome]);
             setNome("");
+        }
     }
 
     const remover = (index) => {

@@ -2,14 +2,8 @@ import { useState } from "react";
 
 export default function FormularioLivro() {
 
-  const [form, setForm] = useState({
-    nome: "",
-    email: "",
-    cidade: "",
-    perfil: "",
-    novidades: false,
-    observacoes: ""
-  });
+  const initialForm = { nome: "", email: "", cidade: "", perfil: "", novidades: false, observacoes: "" };
+  const [form, setForm] = useState(initialForm);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -23,12 +17,14 @@ export default function FormularioLivro() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log("Nome:", form.nome);
-    console.log("Email:", form.email);
-    console.log("Cidade:", form.cidade);
-    console.log("Perfil:", form.perfil);
-    console.log("Novidades:", form.novidades);
-    console.log("Observações:", form.observacoes);
+    if (!form.nome.trim() || !form.email.trim() || !form.cidade.trim() || !form.perfil) {
+      alert("PREENCHA TODOS OS CAMPOS OBRIGATÓRIOS!");
+      return;
+    }
+    else{
+    alert("Enviado");
+    setForm(initialForm);
+    }
   }
 
   return (

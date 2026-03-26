@@ -4,23 +4,29 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 
 //ATIVIDADE 1
-import Contador from "./components/Contador"
+import Contador from "./components/Primeiras-Atividades/Contador"
 
 //ATIVIDADE 2
-import Saudacao from './components/Saudacao'
+import Saudacao from './components/Primeiras-Atividades/Saudacao'
 
 //ATIVIDADE 3
-import Form from "./components/Form"
+import Form from "./components/Primeiras-Atividades/Form"
 
 //ATIVIDADE 4 E 5
-import InputNome from "./components/InputNome"
+import InputNome from "./components/Primeiras-Atividades/InputNome"
 //ATIVIDADE 6
-import Formulario from "./components/Formulario"
-import Lista from "./components/Lista"
+import Formulario from "./components/Primeiras-Atividades/Formulario"
+import Lista from "./components/Primeiras-Atividades/Lista"
+
+//ATIVIDADE 9
+import ContadorHistorico from "./components/Primeiras-Atividades/ContadorHistorico"
 
 //CSS
 import './App.css'
-import ContadorHistorico from "./components/ContadorHistorico"
+
+//ATIVIDADE 2 NOVA
+import FormularioLivro from "./components/Atividade-2/FormularioLivro"
+
 
 function App() {
 
@@ -48,7 +54,9 @@ function App() {
 
       <h1>Lista de Atividades</h1>
       <br />
-      <h1 className="title">Atividade 1</h1>
+
+      {/*PRIMEIRAS ATIVIDADES*/}
+      {/* <h1 className="title">Atividade 1</h1>
 
       <div>
           <Contador />
@@ -83,6 +91,11 @@ function App() {
 
       <div>
         <ContadorHistorico />
+      </div> */}
+
+      {/*ATIVIDADE 2*/}
+      <div>
+        <FormularioLivro />
       </div>
 
       <br />

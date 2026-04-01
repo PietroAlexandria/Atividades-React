@@ -22,7 +22,13 @@ export default function FormularioLivro() {
       return;
     }
     else{
-    alert("Enviado");
+    alert(`Dados enviados:
+Nome: ${form.nome}
+Email: ${form.email}
+Cidade: ${form.cidade}
+Perfil: ${form.perfil}
+Novidades: ${form.novidades}
+Observações: ${form.observacoes}`);
     setForm(initialForm);
     }
   }

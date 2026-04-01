@@ -20,7 +20,7 @@ export default function FormSimple()  {
             return;
         }
         else {
-            alert("Enviado");
+            alert(`Dados enviados com Sucesso!:\nTítulo: ${form.titulo}\nAutor: ${form.autor}`);
             setForm(initialForm);
         }
     }

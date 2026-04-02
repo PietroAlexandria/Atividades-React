@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function FormSimple()  {
     const initialForm = { titulo: "", autor: "", categoria: "", status: false, tecnologias: [] };
     const [form, setForm] = useState(initialForm);
+    const [enviado, setEnviado] = useState(null);
 
     function handleChange(e) {
         const { name, type, value, checked } = e.target;
@@ -31,8 +32,7 @@ export default function FormSimple()  {
             return;
         }
         else {
-            console.log("Dados enviados:", form);
-            alert(`Dados enviados com Sucesso!: \nTítulo: ${form.titulo} \nAutor: ${form.autor} \nCategoria: ${form.categoria} \nStatus: ${form.status}`);
+            setEnviado(form);
             setForm(initialForm);
         }
     }
@@ -117,6 +117,19 @@ export default function FormSimple()  {
 
         <h3 className="data-title">Dados digitados:</h3>
         <pre className="data-display">{JSON.stringify(form, null, 2)}</pre>
+
+        {enviado && (
+            <div>
+                <h3 className="data-title">Dados enviados:</h3>
+                <ul className="data-list">
+                    <li><strong>Título:</strong> {enviado.titulo}</li>
+                    <li><strong>Autor:</strong> {enviado.autor}</li>
+                    <li><strong>Categoria:</strong> {enviado.categoria}</li>
+                    <li><strong>Disponível:</strong> {enviado.status ? "Sim" : "Não"}</li>
+                    <li><strong>Tecnologias:</strong> {enviado.tecnologias.length > 0 ? enviado.tecnologias.join(", ") : "Nenhuma"}</li>
+                </ul>
+            </div>
+        )}
 
     </div>
     );
